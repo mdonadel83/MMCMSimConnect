@@ -52,6 +52,31 @@ Capire se ci sono disconnessioni volontarie
 Analizzare incidenti o problemi tecnici
 Non ti penalizza automaticamente, serve solo per avere un quadro completo!
 
+Perché Serve?
+Immagina un campionato di calcio senza arbitri: sarebbe il caos!
+MMCM Guard è come l'arbitro e il sistema VAR insieme:
+
+Controlla che tutti giochino pulito
+Permette comunicazioni ufficiali
+Raccoglie dati per eventuali controversie
+Garantisce che tutti abbiano le stesse opportunità
+
+Devo Fare Qualcosa?
+NO! Una volta installato:
+
+Avvii SimHub (come sempre)
+Avvii ACC (come sempre)
+Corri la tua gara (come sempre)
+Il plugin lavora automaticamente
+
+Se senti un messaggio vocale, ascoltalo - è importante!
+Posso Disattivarlo?
+Tecnicamente sì, ma NON DOVRESTI se vuoi partecipare agli eventi MMCM Racing, perché:
+
+È obbligatorio per l'iscrizione
+Senza di esso i tuoi risultati potrebbero non essere validi
+È parte del regolamento del campionato
+
 **COME INSTALLARLO**<br>
 Scarica ed installa simhub da qui:<br>
 https://github.com/SHWotever/SimHub
