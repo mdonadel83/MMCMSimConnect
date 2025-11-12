@@ -62,16 +62,6 @@ Permette comunicazioni ufficiali<br>
 Raccoglie dati per eventuali controversie<br>
 Garantisce che tutti abbiano le stesse opportunità<br>
 
-Devo Fare Qualcosa?<br>
-NO! Una volta installato:<br>
-
-Avvii SimHub (come sempre)<br>
-Avvii ACC (come sempre)<br>
-Corri la tua gara (come sempre)<br>
-Il plugin lavora automaticamente<br>
-
-Se senti un messaggio vocale, ascoltalo - è importante!<br>
-
 
 **COME INSTALLARLO**<br>
 Scarica ed installa simhub da qui:<br>
