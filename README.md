@@ -67,7 +67,9 @@ Garantisce che tutti abbiano le stesse opportunità<br>
 Scarica ed installa simhub da qui:<br>
 https://github.com/SHWotever/SimHub
 
-Scarica dalle nostre release lo zip 
+Qui un piccolo video tutorial:
+
+https://youtu.be/MqDn1ar2A54
 
 --------------------------------------------------------------------------------------------------------------------------------
 **Addons per Voci Sintetizzatore Migliori**<br>
