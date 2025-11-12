@@ -2,80 +2,76 @@
             **MMCM SimConnect PlugIn**<br>
 =========================================<br>
 
-MMCM SimConnect per Campionati MMCM cosa fa:
+MMCM SimConnect per Campionati MMCM cosa fa:<br>
 
-✅ Verifica che il pilota sia iscritto alla gara
-✅ Controlla che tutto funzioni correttamente
-✅ Ti passa messaggi importanti dai direttori di gara
-✅ Aiuta a mantenere le competizioni pulite e oneste
+✅ Verifica che il pilota sia iscritto alla gara<br>
+✅ Controlla che tutto funzioni correttamente<br>
+✅ Ti passa messaggi importanti dai direttori di gara<br>
+✅ Aiuta a mantenere le competizioni pulite e oneste<br>
 
-Cosa Fa Esattamente? 🤔
+Cosa Fa Esattamente? 🤔<br>
 
-**1. Ti Riconosce Automaticamente**
+**1. Ti Riconosce Automaticamente**<br>
 Quando entri in una sessione online, il plugin legge il tuo nome dal gioco e controlla se sei iscritto all'evento MMCM Racing.
 È come quando arrivi a un evento e il tuo nome è sulla lista degli iscritti!
 
-**2. Raccoglie Dati della Tua Auto tramite --**
+**2. Raccoglie Dati della Tua Auto tramite --**<br>
 
-Ogni minuto (60 secondi), raccoglie informazioni dalla tua auto:
-Quanto carburante hai
-Temperatura delle gomme
-Eventuali danni
-Che giro stai facendo
-Su che pista sei
-Gestisce la conta dei giri e valida i tuoi giri veloci per le Pre-Qualifiche
+Ogni minuto (60 secondi), raccoglie informazioni dalla tua auto:<br>
+Quanto carburante hai<br>
+Temperatura delle gomme<br>
+Eventuali danni<br>
+Che giro stai facendo<br>
+Su che pista sei<br>
+Gestisce la conta dei giri e valida i tuoi giri veloci per le Pre-Qualifiche<br>
 
-Sostanzialmente è come la telemetria che hanno i veri team di corse!
+Sostanzialmente è come la telemetria che hanno i veri team di corse!<br>
 
-**3. Controlla il Fair Play**
+**3. Controlla il Fair Play**<br>
 
-Per mantenere le gare oneste, verifica che:
+Per mantenere le gare oneste, verifica che:<br>
 
-Non ci siano programmi "cheat" in esecuzione
-Il consumo di carburante sia realistico
+Non ci siano programmi "cheat" in esecuzione<br>
+Il consumo di carburante sia realistico<br>
 
-È come l'ispezione tecnica che fanno alle auto vere prima di correre!
-**4. Ti Porta Messaggi dalla Direzione Gara** 🔊
-Se i direttori di gara hanno qualcosa da dirti (tipo Gestione della "Safety Car" o importanti comunicazioni al pilota), il plugin:
+È come l'ispezione tecnica che fanno alle auto vere prima di correre!<br><br>
 
-Riceve il messaggio dal server
-Te lo LEGGE AD ALTA VOCE in italiano o inglese
-Abbassa automaticamente il volume degli altri programmi mentre parla
-Poi ripristina tutto come prima
+**4. Ti Porta Messaggi dalla Direzione Gara** 🔊<br>
+Se i direttori di gara hanno qualcosa da dirti (tipo Gestione della "Safety Car" o importanti comunicazioni al pilota), il plugin:<br>
 
-È come avere la radio di gara dei piloti veri!
+Riceve il messaggio dal server<br>
+Te lo LEGGE AD ALTA VOCE in italiano o inglese<br>
+Abbassa automaticamente il volume degli altri programmi mentre parla<br>
+Poi ripristina tutto come prima<br>
 
-**5. Rileva il Tasto ESC Durante le Gare** ⌨️
-Per un maggiore realismo.Se premi ESC durante una gara (per uscire o altro), il plugin lo nota e lo segnala. Questo aiuta a:
+È come avere la radio di gara dei piloti veri!<br>
 
-Capire se ci sono disconnessioni volontarie
-Analizzare incidenti o problemi tecnici
-Non ti penalizza automaticamente, serve solo per avere un quadro completo!
+**5. Rileva il Tasto ESC Durante le Gare** ⌨️<br>
+Per un maggiore realismo.Se premi ESC durante una gara (per uscire o altro), il plugin lo nota e lo segnala. Questo aiuta a:<br>
 
-Perché Serve?
-Immagina un campionato di calcio senza arbitri: sarebbe il caos!
-MMCM Guard è come l'arbitro e il sistema VAR insieme:
+Capire se ci sono disconnessioni volontarie<br>
+Analizzare incidenti o problemi tecnici<br>
+Non ti penalizza automaticamente, serve solo per avere un quadro completo!<br>
 
-Controlla che tutti giochino pulito
-Permette comunicazioni ufficiali
-Raccoglie dati per eventuali controversie
-Garantisce che tutti abbiano le stesse opportunità
+Perché Serve?<br>
+Immagina un campionato di calcio senza arbitri: sarebbe il caos!<br>
+MMCM Guard è come l'arbitro e il sistema VAR insieme:<br>
 
-Devo Fare Qualcosa?
-NO! Una volta installato:
+Controlla che tutti giochino pulito<br>
+Permette comunicazioni ufficiali<br>
+Raccoglie dati per eventuali controversie<br>
+Garantisce che tutti abbiano le stesse opportunità<br>
 
-Avvii SimHub (come sempre)
-Avvii ACC (come sempre)
-Corri la tua gara (come sempre)
-Il plugin lavora automaticamente
+Devo Fare Qualcosa?<br>
+NO! Una volta installato:<br>
 
-Se senti un messaggio vocale, ascoltalo - è importante!
-Posso Disattivarlo?
-Tecnicamente sì, ma NON DOVRESTI se vuoi partecipare agli eventi MMCM Racing, perché:
+Avvii SimHub (come sempre)<br>
+Avvii ACC (come sempre)<br>
+Corri la tua gara (come sempre)<br>
+Il plugin lavora automaticamente<br>
 
-È obbligatorio per l'iscrizione
-Senza di esso i tuoi risultati potrebbero non essere validi
-È parte del regolamento del campionato
+Se senti un messaggio vocale, ascoltalo - è importante!<br>
+
 
 **COME INSTALLARLO**<br>
 Scarica ed installa simhub da qui:<br>
