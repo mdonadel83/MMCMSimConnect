@@ -1,5 +1,5 @@
 =========================================<br>
-            **MMCM SimConnect PlugIn**<br>
+            **MMCM SimConnect SimHub PlugIn**<br>
 =========================================<br>
 
 MMCM SimConnect per Campionati MMCM cosa fa:<br>
