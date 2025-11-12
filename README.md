@@ -2,8 +2,6 @@
             **MMCM SimConnect PlugIn**<br>
 =========================================<br>
 
-MMCM SimConnect deveriva da MMCM Guard. E' un plug-in per ** che serve per analizzare la telemetria 
-
 MMCM SimConnect per Campionati MMCM cosa fa:
 
 ✅ Verifica che il pilota sia iscritto alla gara
