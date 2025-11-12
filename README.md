@@ -22,4 +22,4 @@ Dalla finesta cliccare Install 32-bit ,se si vuole anche quelle a 64-bit...si av
 
 <img width="444" height="442" alt="image" src="https://github.com/user-attachments/assets/8473aac7-87de-4f4d-9154-9aad5ec59c6d" />
 
-Tutto ok ora la voce sarà migliore!
+Tutto ok ,ora dai close ,e la voce sarà migliore!
