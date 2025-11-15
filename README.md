@@ -62,10 +62,15 @@ Permette comunicazioni ufficiali<br>
 Raccoglie dati per eventuali controversie<br>
 Garantisce che tutti abbiano le stesse opportunità<br>
 
+==========================================<br>
 
 **COME INSTALLARLO**<br>
 Scarica ed installa simhub da qui:<br>
 https://github.com/SHWotever/SimHub
+<br>
+Scarica dalle Release l'ultima versione dentro alla cartella Bin/Release, prendi i file e copiali all'interno della cartella di SimHub.<br>
+Avvia SimHub e attiva il plugin e metti la spunta di vedelo nella lista menu. Clicca all'interno del menu MMCM SimConnect e fai la login (come se entrassi nel sito di MMCM).
+Quando sei connesso la login resterà attiva ogni volta che avvi SimHub , la login sarà valida per 60 giorni poi sarà necesario rivalidarla.<br>
 
 Qui un piccolo video tutorial:
 
