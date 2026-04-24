@@ -2,15 +2,15 @@
   <img src="https://www.mmcmracing.it/wp-content/uploads/2024/03/cropped-mmcmracing_trasp-1-e1711745622868.png" alt="MMCM Racing" width="200">
 </p>
 
-<h1 align="center">🏎️ MMCM SimConnect v1.9</h1>
+<h1 align="center">🏎️ MMCM SimConnect v1.9.2</h1>
 
 <p align="center">
-  <strong>Plugin SimHub per Assetto Corsa Competizione</strong><br>
+  <strong>Plugin SimHub per Assetto Corsa Competizione e Assetto Corsa EVO</strong><br>
   Assistente di gara con ingegnere di pista virtuale a comandi vocali
 </p>
 
 <p align="center">
-  <img src="https://img.shields.io/badge/version-1.9-red?style=flat-square" alt="Version">
+  <img src="https://img.shields.io/badge/version-1.9.2-red?style=flat-square" alt="Version">
   <img src="https://img.shields.io/badge/ACC-✅%20Supportato-2ecc71?style=flat-square" alt="ACC">
   <img src="https://img.shields.io/badge/AC%20EVO-🧪%20Sperimentale-f4a623?style=flat-square" alt="EVO">
   <img src="https://img.shields.io/badge/SimHub-9.x-blue?style=flat-square" alt="SimHub">
@@ -23,7 +23,40 @@
 
 ---
 
-## 🆕 Novità v1.9 — Ingegnere di Pista Virtuale
+## 🆕 Novità v1.9.2 — Coach Proattivo EVO migliorato
+
+Il **Coach Proattivo** per Assetto Corsa EVO è stato profondamente revisionato per offrire avvisi più precisi, tempestivi e utili durante la gara. Ora ti parla quando serve davvero, con i dati corretti.
+
+### 🔧 Cosa è cambiato
+
+| Area | Miglioramento |
+|------|---------------|
+| 🛞 **Usura freni** | Calcolo corretto dell'usura pad/dischi su tutte le auto EVO. Sistema auto-calibrante che si adatta a ogni vettura senza configurazione manuale. Niente più falsi allarmi al rientro dai box. |
+| 🚧 **Danni carrozzeria** | Scala di lettura corretta per scocca e sospensioni. Mappatura zone left/right verificata sul campo. Le percentuali ora corrispondono al danno reale. |
+| 🔧 **Alert sospensioni** | Nuovo: avviso vocale dedicato quando una sospensione è danneggiata, con soglia indipendente (più sensibile rispetto al body — perché una sospensione compromette subito la guidabilità). |
+| 🚦 **Pit speeding** | Calcolo del delta di velocità completamente riscritto. Ora ti dice esattamente di quanti km/h stai sforando il limite, in tempo reale. |
+| ⚙️ **Engine Map** | Tre alert distinti: avviso quali-map a inizio gara, avviso mappa aggressiva con carburante basso, promemoria di scalare a fine stint. Riconosce più nomi di mappe (push, max, attack, qualifying, level alti). |
+
+### 🎯 Soglie configurabili
+
+Tutte le nuove soglie del coach sono regolabili dal pannello impostazioni del plugin in SimHub, sotto "Impostazioni avanzate":
+- Soglia avviso danno carrozzeria
+- Soglia avviso danno sospensione
+- Tolleranza pit-speeding (km/h)
+- Soglia carburante residuo per alert mappa
+- Soglia giri rimanenti per fine stint
+
+### 🐛 Bug risolti
+
+- Risolto: il coach annunciava "pad al 3%" appena usciti dai box su qualsiasi auto EVO
+- Risolto: percentuali danno errate (24% invece del 2.4% reale)
+- Risolto: alert pit-speeding mai attivato per saturazione del valore raw del sim
+- Risolto: zone danno laterali invertite (sinistra/destra)
+- Risolto: alert mappa motore non riconoscevano le denominazioni più comuni in EVO
+
+---
+
+## 🆕 v1.9 — Ingegnere di Pista Virtuale
 
 Parla con il tuo ingegnere durante la gara. Chiedi gap, carburante, gomme, posizione e strategia usando solo la voce. Risponde in tempo reale con i dati dalla telemetria, come un vero team radio.
 
@@ -42,7 +75,7 @@ Ingegnere:  "Rossi davanti, 2 secondi e 3. Dal leader, 8 secondi.
 - **Push-to-Talk** — premi un tasto (mappabile su volante) e poi parla
 - **Entrambi** — usa il metodo che preferisci
 
-### 🎤 Comandi vocali disponibili
+### 🎤 Comandi vocali generali (ACC + EVO)
 
 | Categoria | Cosa dici | Risposta |
 |-----------|-----------|----------|
@@ -59,8 +92,37 @@ Ingegnere:  "Rossi davanti, 2 secondi e 3. Dal leader, 8 secondi.
 | **Meteo** | `meteo` · `piove` · `condizioni pista` · `grip` | Condizioni e grip pista |
 | **Report** | `situazione` · `report` · `dammi tutto` | Tutto insieme |
 
+### 🧪 Comandi vocali extra solo per AC EVO
+
+Su Assetto Corsa EVO sono disponibili comandi aggiuntivi per i sistemi specifici della vettura:
+
+| Categoria | Cosa dici | Risposta |
+|-----------|-----------|----------|
+| **Track Limits** | `limiti pista` · `track limit` · `taglio` · `penalita` | Stato track limits e warning attivi |
+| **ERS / Ibrido** | `ers` · `deploy` · `ibrido` · `batteria` · `overtake` | Stato batteria, deploy mode, overtake |
+| **Freni** | `freni` · `pad` · `pastiglie` · `dischi` · `usura freni` | Usura pad e dischi per ogni ruota |
+| **Mappa motore** | `mappa` · `mappa motore` · `modalita` · `modalita motore` | Mappa corrente e nome modalità |
+| **Giro ideale** | `ideale` · `giro ideale` · `predicted` · `come va il giro` · `come sto andando` | Predicted lap time vs miglior giro |
+| **Danni** | `danni` · `situazione danni` · `carrozzeria` · `damage` | Danni scocca + sospensioni per zona |
+| **Motore** | `motore` · `temperature motore` · `acqua` · `olio` · `come va il motore` | Temperature acqua/olio motore |
+
 > **In qualifica** il gap è calcolato sul miglior tempo, non sulla posizione in pista.
 > Se sei ai box o non hai completato un giro, l'ingegnere te lo dice.
+
+### 🤖 Coach Proattivo EVO — avvisi spontanei
+
+Oltre a rispondere ai comandi, su EVO il coach **parla da solo** quando rileva situazioni che richiedono la tua attenzione, senza che tu debba chiedere nulla:
+
+- 🛞 Pad o dischi sotto soglia di usura
+- 🚧 Danni carrozzeria o sospensioni
+- 🔥 Surriscaldamento acqua, olio, batteria
+- 🚦 Sforamento limite pit lane
+- ⚙️ Mappa motore inadeguata (troppo aggressiva con poco carburante, dimenticata in quali-mode a inizio gara, da scalare a fine stint)
+- ⚠️ Track limits invalidati
+- 🔄 Marcia inversa / wrong way
+- ⏱️ Predicted lap migliore o peggiore del riferimento
+
+Tutti gli alert sono configurabili e disattivabili individualmente dal pannello impostazioni.
 
 ---
 
@@ -69,7 +131,7 @@ Ingegnere:  "Rossi davanti, 2 secondi e 3. Dal leader, 8 secondi.
 | Gioco | Stato | Note |
 |-------|-------|------|
 | **Assetto Corsa Competizione** | ✅ Stabile | Tutte le funzionalità operative |
-| **Assetto Corsa EVO** | 🧪 Sperimentale | Funzionalità base operative, supporto pieno in sviluppo |
+| **Assetto Corsa EVO** | 🧪 Sperimentale | Funzionalità base operative + comandi vocali e coach proattivo dedicati |
 
 ---
 
@@ -77,7 +139,9 @@ Ingegnere:  "Rossi davanti, 2 secondi e 3. Dal leader, 8 secondi.
 
 | Funzionalità | Descrizione |
 |-------------|-------------|
-| 🎙️ **Ingegnere vocale** | Comandi vocali per gap, passo, fuel, gomme, posizione, meteo |
+| 🎙️ **Ingegnere vocale** | Comandi vocali per gap, passo, fuel, gomme, posizione, meteo (ACC + EVO) |
+| 🧪 **Comandi EVO dedicati** | Comandi extra su AC EVO per ERS, freni, mappa motore, danni, predicted lap, temperature |
+| 🤖 **Coach proattivo EVO** | Avvisi vocali spontanei su usura freni, danni, surriscaldamento, pit speeding, mappa motore |
 | 🎯 **Riconoscimento pilota** | Verifica iscrizione all'evento MMCM all'ingresso in sessione |
 | 📡 **Telemetria** | Carburante, temperature, danni, giri — ogni 60 secondi |
 | ⚖️ **Fair play** | Verifica software e consumi realistici |
@@ -122,12 +186,22 @@ Ingegnere:  "Rossi davanti, 2 secondi e 3. Dal leader, 8 secondi.
 
 <details>
 <summary><strong>Il plugin funziona con AC EVO?</strong></summary>
-Il supporto per AC EVO è in fase sperimentale. Le funzionalità base sono operative ma alcune features potrebbero non essere completamente funzionanti. Stiamo sviluppando attivamente il supporto pieno.
+Il supporto per AC EVO è in fase sperimentale. Le funzionalità base sono operative, e dalla v1.9.2 sono disponibili comandi vocali dedicati e un coach proattivo specifico per i sistemi EVO (ERS, mappa motore, predicted lap, temperature, danni). Stiamo continuando a sviluppare il supporto pieno.
 </details>
 
 <details>
 <summary><strong>L'ingegnere vocale funziona in tutte le sessioni?</strong></summary>
 Sì — qualifica, prove libere e gara. In qualifica il gap è basato sul miglior tempo. Se sei ai box o non hai fatto un giro, l'ingegnere te lo dice.
+</details>
+
+<details>
+<summary><strong>I comandi EVO funzionano anche su ACC?</strong></summary>
+No — i comandi specifici EVO (ERS, mappa motore, predicted, danni dettagliati, temperature motore) sono disponibili solo quando giochi ad Assetto Corsa EVO. Se li chiedi su ACC l'ingegnere ti dice che la funzione non è disponibile su quel gioco.
+</details>
+
+<details>
+<summary><strong>Posso disattivare gli alert proattivi?</strong></summary>
+Sì, ogni categoria di alert (freni, danni, mappa motore, pit speeding, surriscaldamento, ecc.) è abilitabile/disabilitabile individualmente nel pannello impostazioni del plugin in SimHub.
 </details>
 
 <details>
@@ -142,7 +216,7 @@ Sì! Mappa un tasto del volante su una F-key, poi assegnala come PTT nelle impos
 
 <details>
 <summary><strong>Il plugin è obbligatorio?</strong></summary>
-Per le gare MMCM Racing sì. L'ingegnere vocale è opzionale e può essere disattivato.
+Per le gare MMCM Racing sì. L'ingegnere vocale e il coach proattivo sono opzionali e possono essere disattivati.
 </details>
 
 <details>
@@ -169,11 +243,44 @@ No, si aggiorna da solo.
 
 # 🇬🇧 English Version
 
-> [🇮🇹 Versione Italiana](#-novità-v19--ingegnere-di-pista-virtuale)
+> [🇮🇹 Versione Italiana](#-novità-v192--coach-proattivo-evo-migliorato)
 
 ---
 
-## 🆕 What's New in v1.9 — Virtual Race Engineer
+## 🆕 What's New in v1.9.2 — Improved EVO Proactive Coach
+
+The **Proactive Coach** for Assetto Corsa EVO has been deeply revised to provide more accurate, timely and useful warnings during the race. Now it speaks when it really matters, with the right data.
+
+### 🔧 What changed
+
+| Area | Improvement |
+|------|-------------|
+| 🛞 **Brake wear** | Correct pad/disc wear calculation across all EVO cars. Auto-calibrating system that adapts to each vehicle without manual configuration. No more false alerts when leaving the pits. |
+| 🚧 **Body damage** | Correct reading scale for chassis and suspension. Left/right zone mapping verified on track. Percentages now match real damage. |
+| 🔧 **Suspension alerts** | New: dedicated voice warning when a suspension is damaged, with an independent (more sensitive) threshold than body — because a damaged suspension immediately compromises driveability. |
+| 🚦 **Pit speeding** | Speed delta calculation completely rewritten. Now it tells you exactly how many km/h you're over the pit limit, in real time. |
+| ⚙️ **Engine Map** | Three distinct alerts: quali-map warning at race start, aggressive map with low fuel warning, end-of-stint reminder to step down. Recognizes more map names (push, max, attack, qualifying, high levels). |
+
+### 🎯 Configurable thresholds
+
+All new coach thresholds are adjustable from the plugin settings panel in SimHub, under "Advanced settings":
+- Body damage warning threshold
+- Suspension damage warning threshold
+- Pit-speeding tolerance (km/h)
+- Remaining fuel threshold for map alert
+- Remaining laps threshold for end-of-stint
+
+### 🐛 Bug fixes
+
+- Fixed: coach announced "pads at 3%" right after exiting the pits on any EVO car
+- Fixed: incorrect damage percentages (24% instead of the real 2.4%)
+- Fixed: pit-speeding alert never triggered due to saturation of the sim's raw value
+- Fixed: lateral damage zones inverted (left/right)
+- Fixed: engine map alerts didn't recognize the most common naming conventions in EVO
+
+---
+
+## 🆕 v1.9 — Virtual Race Engineer
 
 Talk to your race engineer during the race. Ask for gaps, fuel, tyres, position and strategy using just your voice. Real-time responses from live telemetry — like a real team radio.
 
@@ -192,7 +299,7 @@ Engineer:  "Smith ahead, 2 point 3. Gap to leader, 8 point 1.
 - **Push-to-Talk** — press a button (mappable to steering wheel) then speak
 - **Both** — use whichever you prefer
 
-### 🎤 Available voice commands
+### 🎤 General voice commands (ACC + EVO)
 
 | Category | What you say | Response |
 |----------|-------------|----------|
@@ -209,8 +316,37 @@ Engineer:  "Smith ahead, 2 point 3. Gap to leader, 8 point 1.
 | **Weather** | `weather` · `rain` · `track conditions` | Conditions and track grip |
 | **Report** | `situation` · `update` · `full report` | Everything combined |
 
+### 🧪 Extra voice commands AC EVO only
+
+On Assetto Corsa EVO, additional commands are available for the car's specific systems:
+
+| Category | What you say | Response |
+|----------|-------------|----------|
+| **Track Limits** | `track limits` · `limits` · `cut` · `penalty` | Track limits status and active warnings |
+| **ERS / Hybrid** | `ers` · `deploy` · `hybrid` · `battery` · `overtake` | Battery state, deploy mode, overtake |
+| **Brakes** | `brakes` · `pads` · `discs` · `brake wear` | Pad and disc wear per wheel |
+| **Engine Map** | `map` · `engine map` · `mode` | Current map and mode name |
+| **Ideal Lap** | `ideal` · `ideal lap` · `predicted` · `how is my lap` | Predicted lap time vs best lap |
+| **Damage** | `damage` · `body damage` · `car damage` | Body + suspension damage per zone |
+| **Engine** | `engine` · `engine temps` · `water temp` · `oil temp` | Water/oil engine temperatures |
+
 > **In qualifying** the gap is calculated from best lap times, not track position.
 > If you're in the pits or haven't completed a lap, the engineer tells you.
+
+### 🤖 EVO Proactive Coach — spontaneous warnings
+
+Beyond responding to commands, on EVO the coach **speaks on its own** when it detects situations that require your attention, without you needing to ask:
+
+- 🛞 Pads or discs below wear threshold
+- 🚧 Body or suspension damage
+- 🔥 Water, oil, battery overheating
+- 🚦 Pit lane speed limit exceeded
+- ⚙️ Inadequate engine map (too aggressive with low fuel, forgotten in quali-mode at race start, to step down at end of stint)
+- ⚠️ Track limits invalidated
+- 🔄 Wrong way / reverse direction
+- ⏱️ Predicted lap better or worse than reference
+
+All alerts are configurable and individually disableable from the settings panel.
 
 ---
 
@@ -219,7 +355,7 @@ Engineer:  "Smith ahead, 2 point 3. Gap to leader, 8 point 1.
 | Game | Status | Notes |
 |------|--------|-------|
 | **Assetto Corsa Competizione** | ✅ Stable | All features fully operational |
-| **Assetto Corsa EVO** | 🧪 Experimental | Basic features working, full support in development |
+| **Assetto Corsa EVO** | 🧪 Experimental | Basic features working + dedicated voice commands and proactive coach |
 
 ---
 
@@ -227,7 +363,9 @@ Engineer:  "Smith ahead, 2 point 3. Gap to leader, 8 point 1.
 
 | Feature | Description |
 |---------|-------------|
-| 🎙️ **Voice engineer** | Voice commands for gap, pace, fuel, tyres, position, weather |
+| 🎙️ **Voice engineer** | Voice commands for gap, pace, fuel, tyres, position, weather (ACC + EVO) |
+| 🧪 **Dedicated EVO commands** | Extra commands on AC EVO for ERS, brakes, engine map, damage, predicted lap, temperatures |
+| 🤖 **EVO proactive coach** | Spontaneous voice warnings on brake wear, damage, overheating, pit speeding, engine map |
 | 🎯 **Driver recognition** | Verifies MMCM event registration on session join |
 | 📡 **Telemetry** | Fuel, temperatures, damage, laps — every 60 seconds |
 | ⚖️ **Fair play** | Software and consumption verification |
@@ -272,12 +410,22 @@ Engineer:  "Smith ahead, 2 point 3. Gap to leader, 8 point 1.
 
 <details>
 <summary><strong>Does it work with AC EVO?</strong></summary>
-AC EVO support is experimental. Basic features work but some may not be fully functional yet. We're actively developing full support.
+AC EVO support is experimental. Basic features work, and from v1.9.2 dedicated voice commands and a specific proactive coach are available for EVO systems (ERS, engine map, predicted lap, temperatures, damage). We're continuing to develop full support.
 </details>
 
 <details>
 <summary><strong>Does the voice engineer work in all sessions?</strong></summary>
 Yes — qualifying, practice, and race. In qualifying, gaps are based on best lap times. If you're in the pits or haven't completed a lap, the engineer tells you.
+</details>
+
+<details>
+<summary><strong>Do EVO commands work on ACC too?</strong></summary>
+No — the EVO-specific commands (ERS, engine map, predicted, detailed damage, engine temperatures) are only available when playing Assetto Corsa EVO. If you ask them on ACC, the engineer tells you the feature is not available on that game.
+</details>
+
+<details>
+<summary><strong>Can I disable proactive alerts?</strong></summary>
+Yes, every alert category (brakes, damage, engine map, pit speeding, overheating, etc.) can be enabled/disabled individually in the plugin settings panel in SimHub.
 </details>
 
 <details>
@@ -292,7 +440,7 @@ Yes! Map a wheel button to an F-key, then assign that F-key as PTT in the plugin
 
 <details>
 <summary><strong>Is the plugin mandatory?</strong></summary>
-For MMCM Racing events, yes. The voice engineer is optional and can be disabled.
+For MMCM Racing events, yes. The voice engineer and proactive coach are optional and can be disabled.
 </details>
 
 <details>
@@ -314,7 +462,7 @@ No, it updates itself automatically.
 ---
 
 <p align="center">
-  <strong>🏎️ MMCM SimConnect v1.9</strong><br>
+  <strong>🏎️ MMCM SimConnect v1.9.2</strong><br>
   ACC: fully supported · AC EVO: experimental<br>
   <sub>Made with ❤️ for the MMCM Racing community</sub>
 </p>
