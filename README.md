@@ -1,20 +1,21 @@
 <p align="center">
-  <img src="https://www.mmcmracing.it/wp-content/uploads/2024/03/cropped-mmcmracing_trasp-1-e1711745622868.png" alt="MMCM Racing" width="200">
+  <img src="docs/assets/readme-banner-1280x320.png" alt="MMCM Racing — Online / Offline Championship" width="820">
 </p>
 
-<h1 align="center">🏎️ MMCM SimConnect v1.9.2</h1>
+<h1 align="center">MMCM SimConnect v1.9.9</h1>
 
 <p align="center">
-  <strong>Plugin SimHub per Assetto Corsa Competizione e Assetto Corsa EVO</strong><br>
-  Assistente di gara con ingegnere di pista virtuale a comandi vocali
+  <b>Plugin SimHub per Assetto Corsa Competizione e Assetto Corsa EVO</b><br>
+  Ingegnere di pista vocale, campionato online e carriera offline — tutto dentro SimHub.
 </p>
 
 <p align="center">
-  <img src="https://img.shields.io/badge/version-1.9.2-red?style=flat-square" alt="Version">
-  <img src="https://img.shields.io/badge/ACC-✅%20Supportato-2ecc71?style=flat-square" alt="ACC">
-  <img src="https://img.shields.io/badge/AC%20EVO-🧪%20Sperimentale-f4a623?style=flat-square" alt="EVO">
+  <img src="https://img.shields.io/badge/versione-1.9.9-red?style=flat-square" alt="Versione">
+  <img src="https://img.shields.io/badge/ACC-%E2%9C%85%20Supportato-2ecc71?style=flat-square" alt="ACC">
+  <img src="https://img.shields.io/badge/AC%20EVO-%F0%9F%A7%AA%20Sperimentale-f4a623?style=flat-square" alt="EVO">
   <img src="https://img.shields.io/badge/SimHub-9.x-blue?style=flat-square" alt="SimHub">
   <img src="https://img.shields.io/badge/Windows-10%2F11-0078d4?style=flat-square" alt="Windows">
+  <img src="https://img.shields.io/badge/licenza-GPL--3.0-lightgrey?style=flat-square" alt="Licenza">
 </p>
 
 ---
@@ -23,44 +24,123 @@
 
 ---
 
-## 🆕 Novità v1.9.2 — Coach Proattivo EVO migliorato
+## 🆕 Novità v1.9.9 — Campionato online e carriera offline
 
-Il **Coach Proattivo** per Assetto Corsa EVO è stato profondamente revisionato per offrire avvisi più precisi, tempestivi e utili durante la gara. Ora ti parla quando serve davvero, con i dati corretti.
+La 1.9.9 è la versione più grande mai rilasciata. Fino alla 1.9.2 il plugin era un assistente
+di gara: leggeva la telemetria, parlava, controllava le iscrizioni. Da oggi è anche **il posto
+da cui si corre**.
 
-### 🔧 Cosa è cambiato
+Due modi di correre, uno accanto all'altro:
 
-| Area | Miglioramento |
-|------|---------------|
-| 🛞 **Usura freni** | Calcolo corretto dell'usura pad/dischi su tutte le auto EVO. Sistema auto-calibrante che si adatta a ogni vettura senza configurazione manuale. Niente più falsi allarmi al rientro dai box. |
-| 🚧 **Danni carrozzeria** | Scala di lettura corretta per scocca e sospensioni. Mappatura zone left/right verificata sul campo. Le percentuali ora corrispondono al danno reale. |
-| 🔧 **Alert sospensioni** | Nuovo: avviso vocale dedicato quando una sospensione è danneggiata, con soglia indipendente (più sensibile rispetto al body — perché una sospensione compromette subito la guidabilità). |
-| 🚦 **Pit speeding** | Calcolo del delta di velocità completamente riscritto. Ora ti dice esattamente di quanti km/h stai sforando il limite, in tempo reale. |
-| ⚙️ **Engine Map** | Tre alert distinti: avviso quali-map a inizio gara, avviso mappa aggressiva con carburante basso, promemoria di scalare a fine stint. Riconosce più nomi di mappe (push, max, attack, qualifying, level alti). |
+| | 🏆 **Carriera** (offline) | 🏁 **Campionato MP** (online) |
+|---|---|---|
+| **Contro chi** | Bot di AC EVO, quando vuoi tu | Piloti veri, al round della stagione |
+| **Cosa metti in gioco** | Crediti, auto, licenza | Crediti, auto, punti, safety rating |
+| **Chi giudica** | Nessuno: i contatti restano tra te e il tuo rating | Direzione Gara MMCM, con episodi e documenti |
+| **Serve un server?** | No | Sì, quello ufficiale del round |
 
-### 🎯 Soglie configurabili
+Le due cose condividono lo stesso pilota, lo stesso garage e lo stesso conto in banca. La
+carriera offline è il modo di arrivare in griglia con un'auto pagata da te.
 
-Tutte le nuove soglie del coach sono regolabili dal pannello impostazioni del plugin in SimHub, sotto "Impostazioni avanzate":
-- Soglia avviso danno carrozzeria
-- Soglia avviso danno sospensione
-- Tolleranza pit-speeding (km/h)
-- Soglia carburante residuo per alert mappa
-- Soglia giri rimanenti per fine stint
-
-### 🐛 Bug risolti
-
-- Risolto: il coach annunciava "pad al 3%" appena usciti dai box su qualsiasi auto EVO
-- Risolto: percentuali danno errate (24% invece del 2.4% reale)
-- Risolto: alert pit-speeding mai attivato per saturazione del valore raw del sim
-- Risolto: zone danno laterali invertite (sinistra/destra)
-- Risolto: alert mappa motore non riconoscevano le denominazioni più comuni in EVO
+> **Cos'è il safety rating, per chi non lo conosce ancora.** È il tuo indicatore personale
+> di quanto guidi pulito: un numero che ti segue in tutta la carriera MMCM, in single player
+> e online. Ogni contatto lo abbassa. Fino a questa versione poteva **solo** abbassarsi — non
+> esisteva modo di farlo risalire correndo bene, solo di smettere di farlo scendere. È
+> proprio questo il punto che cambia con la 1.9.9, spiegato qui sotto.
 
 ---
 
-## 🆕 v1.9 — Ingegnere di Pista Virtuale
+### 🏆 Carriera MMCM — il campionato offline
 
-Parla con il tuo ingegnere durante la gara. Chiedi gap, carburante, gomme, posizione e strategia usando solo la voce. Risponde in tempo reale con i dati dalla telemetria, come un vero team radio.
+Un pilota, un budget, un garage. Si comincia con un capitale iniziale e un'auto scelta al
+concessionario, e da lì si va avanti a forza di risultati.
 
-### Come funziona
+**Come si parte** — Alla prima attivazione si apre la creazione guidata dentro SimHub: come
+funziona l'economia, quali auto puoi permetterti con il budget iniziale, quanto ti resta in
+tasca dopo l'acquisto. Tre passi, nessun passaggio dal sito.
+
+| Cosa | Come funziona |
+|---|---|
+| 🏪 **Concessionario** | Catalogo vetture con prezzo, categoria e costo delle riparazioni. Compri quello che il saldo ti permette. |
+| 🔧 **Garage** | Le auto che possiedi, con il danno accumulato. Le riparazioni si pagano. |
+| 🏆 **Campionati** | Offerte disponibili con requisiti, quota d'iscrizione e montepremi. Ti iscrivi scegliendo con quale auto correre. |
+| 💰 **Sponsor** | Il vero motore economico: i premi gara da soli non bastano. Le offerte arrivano in base a reputazione e safety rating — prima i piccoli locali, poi i grandi. Scadono, quindi vanno guardate. |
+| 🏦 **Banca** | Prestiti con i piani affiancati: rata, costo totale e TAEG di ognuno. Estinzione anticipata e storico dei rapporti. Nessun campo importo e bottone "richiedi": prima si confronta. |
+| 📈 **Progressione** | Si sale di categoria e di licenza per merito, con criteri visibili. Le promozioni hanno una pagella con i numeri che l'hanno decisa. |
+| 📊 **Storico** | Ogni sessione con contatti, track limits e quanto safety rating è costata. La risposta con i fatti a "il mio rating non sale ma non ho mai fatto niente". |
+
+**Ora il safety rating può anche salire.** Prima, l'unico modo di "guadagnarlo" era la gara
+perfetta — che non esiste, perché basta un contatto qualsiasi, anche non colpa tua, e il
+numero scende comunque. Da questa versione il plugin misura gli **stint di lotta**: quanto a
+lungo hai corso fianco a fianco con un avversario *senza toccarlo*. Uno stint matura il bonus
+solo se si chiude pulito; un contatto lo azzera, non lo riduce. Sotto i 20 secondi non è una
+lotta, è un sorpasso, e non conta.
+
+---
+
+### 🏁 Campionato MP — il campionato online
+
+La stagione multiplayer, gestita dal plugin dall'iscrizione al verdetto della Direzione Gara.
+
+**Tre modi di iscriversi**, una scelta sola valida per tutti i round:
+
+- **Con la propria auto** — corri con una vettura del tuo garage. I danni sono tuoi.
+- **A noleggio** — il campionato ti presta l'auto. Paghi il noleggio e i danni fino alla
+  franchigia; oltre, paga il campionato.
+- **Distaccato** — corri e basta: presenza, contatti e classifica sì, crediti no. Resta
+  aperto anche a chi è in rosso, perché correre è l'unico modo di rientrare.
+
+| Cosa | Come funziona |
+|---|---|
+| ⏱️ **Pre-qualifiche live** | Le piste del ciclo, quelle fatte, quelle che restano. Con la distinzione che conta: il **tempo ufficiale** (sotto soglia, che entra in classifica) e il **tuo migliore**, con il delta dalla soglia. Chi gira sopra soglia sa se gli mancano due decimi o dieci secondi. |
+| 🚦 **Semaforo di sessione** | Overlay always-on-top che verifica pista, vettura, regolamento e iscrizione **mentre configuri la sessione nei menu**, non dopo. Passa da solo alla modalità compatta quando sei in pista. |
+| ⚖️ **Direzione Gara** | Gli episodi arrivano dalla telemetria dei due piloti coinvolti, non da una segnalazione. Gli steward vedono entrambi i lati, giudicano, pubblicano il documento. Reclami e richieste di riesame gestiti dentro il plugin. |
+| 📋 **Coda presenze** | Una riga per pilota con il suggerimento accanto e gli episodi della sua gara in linea. Un round non si chiude con dentro contatti mai guardati. |
+| 🚗 **Entrylist e ammissioni** | Catalogo vetture con categoria MMCM e ammissioni per campionato. Cosa si può guidare qui, deciso dal regolamento. |
+| 🏁 **Risultati e classifiche** | Risultati di round, classifica di campionato, storico. Import dei file risultati di AC EVO e da SimGrid per gli admin. |
+
+**Rilevamento contatti riscritto.** Il plugin ora riconosce le posizioni di tutte le auto in
+pista, non solo la propria: prima, senza sapere dove fossero gli avversari, ogni contatto
+veniva classificato come muro. **Sola lettura: non modifica né interferisce col gioco.**
+
+Il riconoscimento del contatto è più preciso: distingue un vero impatto da una staccata
+forte o da una curva presa al limite, cosa che prima generava falsi positivi.
+
+---
+
+### 🔒 Trasparenza e dati
+
+- **Niente parte senza consenso.** All'attivazione della carriera si apre l'informativa
+  completa, con la casella **non pre-spuntata**. Se rifiuti, la spunta torna indietro da sola
+  e nessun dato esce. Il rilevatore può girare in locale, ma i dati escono solo a sessione
+  agganciata.
+- **Payload firmati** HMAC-SHA256 su ogni invio.
+- **Identità degli avversari risolta lato server**: il plugin registra posizioni e timestamp
+  UTC, non nomi. I car_id di EVO cambiano a ogni sessione.
+- **Nessuna penalità automatica.** Il plugin raccoglie i fatti, le decisioni sono della
+  Direzione Gara secondo regolamento.
+- **Niente giri persi.** La coda dei giri si scrive anche su disco: se il PC si pianta o
+  salta la corrente, la gara non sparisce con la memoria.
+
+---
+
+### 🐛 Correzioni accumulate dalla 1.9.3 alla 1.9.9
+
+| Area | Cosa è stato risolto |
+|---|---|
+| 🛞 **Gomme EVO** | SimHub scambiava anteriore destra e posteriore destra: ora i valori ruota su EVO passano dai path raw. Pressioni di riferimento per compound. |
+| 🚧 **Danni EVO** | Normalizzazione basata su dati misurati, non stimati. Zone laterali non più invertite. |
+| 🏁 **Sessioni EVO** | La qualifica di EVO gira come `AC_TIME_ATTACK`: il plugin la riconosce e non la tratta più come time attack libero. Risolto il "P2 su 0/1". |
+| 🚦 **Pit speeding** | Delta in km/h reale rispetto al limite, non più saturato dal valore raw del sim. |
+| 🛑 **Usura freni** | Salta il calcolo durante il pit e usa un grace period all'uscita: niente più "pad al 3%" appena rientrati. |
+| 📍 **Gap e posizione** | Contesto di posizione e trend di avvicinamento nelle risposte dell'ingegnere. |
+
+---
+
+## 🎙️ Ingegnere di Pista Virtuale
+
+Parla con il tuo ingegnere durante la gara. Chiedi gap, carburante, gomme, posizione e
+strategia usando solo la voce. Risponde in tempo reale con i dati dalla telemetria.
 
 ```
 Tu:         "Ingegnere"
@@ -70,89 +150,90 @@ Ingegnere:  "Rossi davanti, 2 secondi e 3. Dal leader, 8 secondi.
              Bene, mantieni il ritmo, vai vai vai"
 ```
 
-**Due modi per attivare:**
-- **Wake Word** — dì "ingegnere" e poi il comando
-- **Push-to-Talk** — premi un tasto (mappabile su volante) e poi parla
-- **Entrambi** — usa il metodo che preferisci
+**Due modi per attivare:** wake word ("ingegnere"), Push-to-Talk su un tasto del volante, o
+entrambi. Il riconoscimento gira su un processo esterno a priorità alta: nessun calo di FPS
+anche in fullscreen.
 
 ### 🎤 Comandi vocali generali (ACC + EVO)
 
 | Categoria | Cosa dici | Risposta |
-|-----------|-----------|----------|
+|---|---|---|
 | **Gap** | `gap` · `distacco` | Gap completo: davanti, dietro, leader |
-| | `davanti` · `gap davanti` · `chi ho davanti` | Gap dal pilota davanti |
-| | `dietro` · `gap dietro` · `chi ho dietro` | Gap dal pilota dietro |
-| | `gap dal primo` · `gap leader` · `distacco dal primo` | Distacco dal leader |
-| **Passo** | `passo` · `tempi` · `media giri` · `come vado` | Ultimo giro, miglior giro, confronto |
-| **Carburante** | `carburante` · `benzina` · `fuel` · `autonomia` | Litri, consumo/giro, autonomia |
+| | `davanti` · `chi ho davanti` | Gap dal pilota davanti |
+| | `dietro` · `chi ho dietro` | Gap dal pilota dietro |
+| | `gap dal primo` · `gap leader` | Distacco dal leader |
+| **Passo** | `passo` · `tempi` · `come vado` | Ultimo giro, miglior giro, confronto |
+| **Carburante** | `carburante` · `benzina` · `autonomia` | Litri, consumo/giro, autonomia |
 | | `strategia` · `pit stop` | + calcolo se basta per finire |
-| **Gomme** | `gomme` · `pressioni` · `stato gomme` | Pressioni 4 ruote |
+| **Gomme** | `gomme` · `pressioni` | Pressioni 4 ruote |
 | | `temperature gomme` | Pressioni + temperature |
 | **Posizione** | `posizione` · `dove sono` · `classifica` | Posizione, chi è davanti/dietro |
-| **Meteo** | `meteo` · `piove` · `condizioni pista` · `grip` | Condizioni e grip pista |
+| **Meteo** | `meteo` · `piove` · `grip` | Condizioni e grip pista |
 | **Report** | `situazione` · `report` · `dammi tutto` | Tutto insieme |
+
+> **In qualifica** il gap è calcolato sul miglior tempo, non sulla posizione in pista.
+> Se sei ai box o non hai completato un giro, l'ingegnere te lo dice invece di darti dati
+> inaffidabili.
 
 ### 🧪 Comandi vocali extra solo per AC EVO
 
-Su Assetto Corsa EVO sono disponibili comandi aggiuntivi per i sistemi specifici della vettura:
-
 | Categoria | Cosa dici | Risposta |
-|-----------|-----------|----------|
-| **Track Limits** | `limiti pista` · `track limit` · `taglio` · `penalita` | Stato track limits e warning attivi |
-| **ERS / Ibrido** | `ers` · `deploy` · `ibrido` · `batteria` · `overtake` | Stato batteria, deploy mode, overtake |
-| **Freni** | `freni` · `pad` · `pastiglie` · `dischi` · `usura freni` | Usura pad e dischi per ogni ruota |
-| **Mappa motore** | `mappa` · `mappa motore` · `modalita` · `modalita motore` | Mappa corrente e nome modalità |
-| **Giro ideale** | `ideale` · `giro ideale` · `predicted` · `come va il giro` · `come sto andando` | Predicted lap time vs miglior giro |
-| **Danni** | `danni` · `situazione danni` · `carrozzeria` · `damage` | Danni scocca + sospensioni per zona |
-| **Motore** | `motore` · `temperature motore` · `acqua` · `olio` · `come va il motore` | Temperature acqua/olio motore |
-
-> **In qualifica** il gap è calcolato sul miglior tempo, non sulla posizione in pista.
-> Se sei ai box o non hai completato un giro, l'ingegnere te lo dice.
+|---|---|---|
+| **Track Limits** | `limiti pista` · `taglio` · `penalita` | Stato track limits e warning attivi |
+| **ERS / Ibrido** | `ers` · `deploy` · `batteria` · `overtake` | Batteria, deploy mode, overtake |
+| **Freni** | `freni` · `pad` · `dischi` · `usura freni` | Usura pad e dischi per ruota |
+| **Mappa motore** | `mappa` · `modalita motore` | Mappa corrente e nome modalità |
+| **Giro ideale** | `ideale` · `predicted` · `come sto andando` | Predicted lap vs miglior giro |
+| **Danni** | `danni` · `carrozzeria` | Danni scocca + sospensioni per zona |
+| **Motore** | `motore` · `acqua` · `olio` | Temperature acqua/olio |
 
 ### 🤖 Coach Proattivo EVO — avvisi spontanei
 
-Oltre a rispondere ai comandi, su EVO il coach **parla da solo** quando rileva situazioni che richiedono la tua attenzione, senza che tu debba chiedere nulla:
+Su EVO il coach **parla da solo** quando serve, senza che tu chieda:
 
-- 🛞 Pad o dischi sotto soglia di usura
-- 🚧 Danni carrozzeria o sospensioni
-- 🔥 Surriscaldamento acqua, olio, batteria
-- 🚦 Sforamento limite pit lane
-- ⚙️ Mappa motore inadeguata (troppo aggressiva con poco carburante, dimenticata in quali-mode a inizio gara, da scalare a fine stint)
-- ⚠️ Track limits invalidati
-- 🔄 Marcia inversa / wrong way
-- ⏱️ Predicted lap migliore o peggiore del riferimento
+🛞 Pad o dischi sotto soglia · 🚧 Danni a carrozzeria o sospensioni · 🔥 Surriscaldamento
+acqua, olio, batteria · 🚦 Sforamento limite pit lane · ⚙️ Mappa motore inadeguata ·
+⚠️ Track limits invalidati · 🔄 Marcia inversa · ⏱️ Predicted lap migliore o peggiore
 
-Tutti gli alert sono configurabili e disattivabili individualmente dal pannello impostazioni.
+Ogni categoria è disattivabile singolarmente, e tutte le soglie sono regolabili dal pannello
+impostazioni.
 
 ---
 
 ## 🏁 Compatibilità
 
 | Gioco | Stato | Note |
-|-------|-------|------|
-| **Assetto Corsa Competizione** | ✅ Stabile | Tutte le funzionalità operative |
-| **Assetto Corsa EVO** | 🧪 Sperimentale | Funzionalità base operative + comandi vocali e coach proattivo dedicati |
+|---|---|---|
+| **Assetto Corsa Competizione** | ✅ Stabile | Ingegnere, telemetria, pre-qualifiche, fair play, Direzione Gara |
+| **Assetto Corsa EVO** | 🧪 Sperimentale | Tutto quanto sopra + coach proattivo, comandi dedicati, carriera e campionato MP |
+
+> Carriera e Campionato MP funzionano su AC EVO. Su ACC restano operative telemetria,
+> pre-qualifiche e ingegnere vocale.
 
 ---
 
 ## ✅ Tutte le funzionalità
 
 | Funzionalità | Descrizione |
-|-------------|-------------|
-| 🎙️ **Ingegnere vocale** | Comandi vocali per gap, passo, fuel, gomme, posizione, meteo (ACC + EVO) |
-| 🧪 **Comandi EVO dedicati** | Comandi extra su AC EVO per ERS, freni, mappa motore, danni, predicted lap, temperature |
-| 🤖 **Coach proattivo EVO** | Avvisi vocali spontanei su usura freni, danni, surriscaldamento, pit speeding, mappa motore |
-| 🎯 **Riconoscimento pilota** | Verifica iscrizione all'evento MMCM all'ingresso in sessione |
-| 📡 **Telemetria** | Carburante, temperature, danni, giri — ogni 60 secondi |
+|---|---|
+| 🏆 **Carriera offline** | Pilota, budget, garage, sponsor, banca, licenze, progressione |
+| 🏁 **Campionato MP** | Iscrizione stagione, noleggi, entrylist, presenze, risultati |
+| ⚖️ **Direzione Gara** | Episodi dai due lati, documenti, reclami, riesami |
+| 🚦 **Semaforo sessione** | Overlay di validazione visibile dai menu del gioco |
+| ⏱️ **Pre-qualifiche** | Tempo ufficiale e migliore, delta dalla soglia, quadro generale |
+| 🎙️ **Ingegnere vocale** | Gap, passo, fuel, gomme, posizione, meteo (ACC + EVO) |
+| 🧪 **Comandi EVO** | ERS, freni, mappa motore, danni, predicted lap, temperature |
+| 🤖 **Coach proattivo** | Avvisi vocali spontanei, tutti configurabili |
+| 📡 **Telemetria** | Carburante, temperature, danni, giri — con coda persistente |
 | ⚖️ **Fair play** | Verifica software e consumi realistici |
 | 📻 **Radio Direzione Gara** | Messaggi vocali con ducking automatico del volume |
-| 🌡️ **Pressioni gomme** | Suggerimenti regolazioni dopo 2 giri in qualifica |
+| 🌡️ **Pressioni gomme** | Suggerimenti dopo 2 giri in qualifica |
 | ⛽ **Calcolo carburante** | Litri necessari calcolati prima della gara |
-| ⚠️ **Track limits** | Avviso vocale giro invalidato (Pre-Qualifiche) |
+| 🎨 **Livree** | Invio e scarico livree del campionato |
 | 🔊 **Multilingua** | Italiano e inglese automatico da Windows |
 | 🔄 **Auto-update** | Si aggiorna da solo |
-| 🎨 **Livree** | Invio e scarico livree del campionato |
-| 🔐 **Login semplice** | Auto-login, Steam, o classico |
+| 🔐 **Login** | Auto-login, Steam, o classico |
+| 🛠️ **Strumenti admin** | Stagione, punti, catalogo, noleggi, progressione, import risultati |
 
 ---
 
@@ -160,7 +241,8 @@ Tutti gli alert sono configurabili e disattivabili individualmente dal pannello 
 
 ### Auto-Installer (consigliato)
 
-1. Scarica `Installa_MMCM_SimConnect.bat` e `Install-MMCMSimConnect.ps1` dalla [release page](https://github.com/mdonadel83/AutoInstall_MMCMSIMCONNECT/releases)
+1. Scarica `Installa_MMCM_SimConnect.bat` e `Install-MMCMSimConnect.ps1` dalla
+   [release page](https://github.com/mdonadel83/AutoInstall_MMCMSIMCONNECT/releases)
 2. Mettili nella **stessa cartella**
 3. Chiudi SimHub
 4. Doppio click su `Installa_MMCM_SimConnect.bat`
@@ -168,11 +250,26 @@ Tutti gli alert sono configurabili e disattivabili individualmente dal pannello 
 
 ### Installazione manuale
 
-1. Scarica tutti i file da [GitHub Releases](https://github.com/mdonadel83/MMCMSimConnect/releases) (cartella `Release/net48`)
-2. Copia nella cartella di installazione SimHub
+1. Scarica tutti i file da [Releases](https://github.com/mdonadel83/MMCMSimConnect/releases)
+   (cartella `Release/net48`)
+2. Copia nella cartella di installazione di SimHub
 3. Avvia SimHub → abilita il plugin → login
 
-> **Requisiti:** Windows 10/11, SimHub, connessione Internet
+### Attivare la Carriera
+
+1. Impostazioni del plugin → scheda **🏆 Carriera**
+2. Spunta **Abilita modalità Carriera MMCM** → leggi l'informativa → **Accetto e attivo**
+3. Si apre la creazione del pilota: budget iniziale, scelta dell'auto, conferma
+
+> **Requisiti:** Windows 10/11, SimHub 9.x, .NET Framework 4.8, connessione Internet.
+
+> 💡 **Consigliata una licenza SimHub.** Senza, SimHub aggiorna i dati di gioco 10 volte al
+> secondo; con una licenza attiva sale a 60. Il plugin legge quei dati in tempo reale per
+> calcolare tempi, contatti e validità delle sessioni: più aggiornamenti al secondo
+> significano più precisione, specialmente nei momenti concitati di una gara. La licenza è
+> un contributo libero (a partire da pochi euro), è perpetua e si acquista dal
+> [sito ufficiale di SimHub](https://www.simhubdash.com/). Il plugin funziona anche senza,
+> ma è la differenza fra "quasi sempre preciso" e "sempre preciso".
 
 ---
 
@@ -184,45 +281,42 @@ Tutti gli alert sono configurabili e disattivabili individualmente dal pannello 
 
 ## ❓ FAQ
 
-<details>
-<summary><strong>Il plugin funziona con AC EVO?</strong></summary>
-Il supporto per AC EVO è in fase sperimentale. Le funzionalità base sono operative, e dalla v1.9.2 sono disponibili comandi vocali dedicati e un coach proattivo specifico per i sistemi EVO (ERS, mappa motore, predicted lap, temperature, danni). Stiamo continuando a sviluppare il supporto pieno.
-</details>
+**Devo per forza avere una carriera per correre nel campionato online?**
+No. Senza stagione carriera si corre lo stesso, semplicemente senza economia. E chi non vuole
+crediti né spese può iscriversi come **distaccato**: presenza, contatti e classifica valgono
+comunque.
 
-<details>
-<summary><strong>L'ingegnere vocale funziona in tutte le sessioni?</strong></summary>
-Sì — qualifica, prove libere e gara. In qualifica il gap è basato sul miglior tempo. Se sei ai box o non hai fatto un giro, l'ingegnere te lo dice.
-</details>
+**Cosa succede se rompo l'auto a noleggio?**
+Paghi i danni fino alla franchigia. Oltre quella cifra paga il campionato. Alla restituzione
+l'admin vede i danni e la franchigia prima di confermare l'addebito.
 
-<details>
-<summary><strong>I comandi EVO funzionano anche su ACC?</strong></summary>
-No — i comandi specifici EVO (ERS, mappa motore, predicted, danni dettagliati, temperature motore) sono disponibili solo quando giochi ad Assetto Corsa EVO. Se li chiedi su ACC l'ingegnere ti dice che la funzione non è disponibile su quel gioco.
-</details>
+**Sono in rosso, sono fuori dal campionato?**
+No. L'iscrizione da distaccato resta aperta anche a chi è insolvente, perché correre è l'unico
+modo di rientrare.
 
-<details>
-<summary><strong>Posso disattivare gli alert proattivi?</strong></summary>
-Sì, ogni categoria di alert (freni, danni, mappa motore, pit speeding, surriscaldamento, ecc.) è abilitabile/disabilitabile individualmente nel pannello impostazioni del plugin in SimHub.
-</details>
+**Il plugin decide le penalità?**
+No. Raccoglie i fatti — danno, posizioni, orari — e li porta agli steward. Le
+decisioni sono della Direzione Gara secondo il regolamento.
 
-<details>
-<summary><strong>Il riconoscimento vocale cala gli FPS?</strong></summary>
-No. Gira su un processo separato a priorità alta, completamente indipendente dal gioco.
-</details>
+**Chi vede i miei contatti in carriera offline?**
+Nessuno. Nel single player i contatti restano un fatto privato tra te e il tuo safety rating.
+La Direzione Gara si occupa solo del multiplayer, dove ci sono avversari veri.
 
-<details>
-<summary><strong>Posso usare un tasto del volante come PTT?</strong></summary>
-Sì! Mappa un tasto del volante su una F-key, poi assegnala come PTT nelle impostazioni del plugin.
-</details>
+**Il plugin funziona con AC EVO?**
+Il supporto EVO resta ufficialmente sperimentale, ma è dove il plugin fa di più: coach
+proattivo, comandi dedicati, carriera e campionato MP sono tutte funzioni pensate per EVO.
 
-<details>
-<summary><strong>Il plugin è obbligatorio?</strong></summary>
-Per le gare MMCM Racing sì. L'ingegnere vocale e il coach proattivo sono opzionali e possono essere disattivati.
-</details>
+**Posso disattivare gli alert proattivi?**
+Sì, categoria per categoria, e anche le soglie sono regolabili.
 
-<details>
-<summary><strong>Devo aggiornarlo manualmente?</strong></summary>
+**Il riconoscimento vocale cala gli FPS?**
+No. Gira su un processo separato a priorità alta, indipendente dal gioco.
+
+**Il plugin è obbligatorio?**
+Per le gare MMCM Racing sì. Ingegnere vocale e coach proattivo sono opzionali.
+
+**Devo aggiornarlo manualmente?**
 No, si aggiorna da solo.
-</details>
 
 ---
 
@@ -231,60 +325,140 @@ No, si aggiorna da solo.
 | | |
 |---|---|
 | 🌐 **Sito** | [www.mmcmracing.it](https://www.mmcmracing.it) |
-| 💬 **Discord** | [discord.gg/jMa4GzGW](https://discord.gg/jMa4GzGW) |
+| 📖 **Pagina plugin** | [MMCM SimConnect](https://www.mmcmracing.it/simhub-mmcm-simconnect/) |
+| 💬 **Discord** | [discord.gg/ZrJg7KGnsd](https://discord.gg/ZrJg7KGnsd) |
+| ▶️ **YouTube** | [MMCM Racing](https://www.youtube.com/channel/UCnFQRv_ycZ8D8_hEivdR-ZA) |
+| 🟣 **Twitch** | [mmcmracing](https://www.twitch.tv/mmcmracing) |
 | 📧 **Email** | league@mmcmracing.it |
 | 🚀 **Auto-Installer** | [Download](https://github.com/mdonadel83/AutoInstall_MMCMSIMCONNECT/releases) |
 
 ---
 
-<br><br><br>
-
----
+<br>
 
 # 🇬🇧 English Version
 
-> [🇮🇹 Versione Italiana](#-novità-v192--coach-proattivo-evo-migliorato)
+> [🇮🇹 Versione Italiana](#-novità-v199--campionato-online-e-carriera-offline)
+
+> ⚠️ **Work in progress.** This translation isn't complete yet and may lag behind the
+> Italian version above. When in doubt, the Italian section is the one kept up to date.
 
 ---
 
-## 🆕 What's New in v1.9.2 — Improved EVO Proactive Coach
+## 🆕 What's new in v1.9.9 — Online championship and offline career
 
-The **Proactive Coach** for Assetto Corsa EVO has been deeply revised to provide more accurate, timely and useful warnings during the race. Now it speaks when it really matters, with the right data.
+1.9.9 is the biggest release so far. Up to 1.9.2 the plugin was a race assistant: it read
+telemetry, talked to you, checked your entry. From today it is also **the place you race
+from**.
 
-### 🔧 What changed
+Two ways to race, side by side:
 
-| Area | Improvement |
-|------|-------------|
-| 🛞 **Brake wear** | Correct pad/disc wear calculation across all EVO cars. Auto-calibrating system that adapts to each vehicle without manual configuration. No more false alerts when leaving the pits. |
-| 🚧 **Body damage** | Correct reading scale for chassis and suspension. Left/right zone mapping verified on track. Percentages now match real damage. |
-| 🔧 **Suspension alerts** | New: dedicated voice warning when a suspension is damaged, with an independent (more sensitive) threshold than body — because a damaged suspension immediately compromises driveability. |
-| 🚦 **Pit speeding** | Speed delta calculation completely rewritten. Now it tells you exactly how many km/h you're over the pit limit, in real time. |
-| ⚙️ **Engine Map** | Three distinct alerts: quali-map warning at race start, aggressive map with low fuel warning, end-of-stint reminder to step down. Recognizes more map names (push, max, attack, qualifying, high levels). |
+| | 🏆 **Career** (offline) | 🏁 **MP Championship** (online) |
+|---|---|---|
+| **Against** | AC EVO AI, whenever you want | Real drivers, on season round night |
+| **At stake** | Credits, car, licence | Credits, car, points, safety rating |
+| **Who judges** | Nobody: contacts stay between you and your rating | MMCM Race Direction, with episodes and documents |
+| **Server needed?** | No | Yes, the official round server |
 
-### 🎯 Configurable thresholds
+Both share the same driver, the same garage and the same bank account. The offline career is
+how you reach the grid in a car you paid for yourself.
 
-All new coach thresholds are adjustable from the plugin settings panel in SimHub, under "Advanced settings":
-- Body damage warning threshold
-- Suspension damage warning threshold
-- Pit-speeding tolerance (km/h)
-- Remaining fuel threshold for map alert
-- Remaining laps threshold for end-of-stint
-
-### 🐛 Bug fixes
-
-- Fixed: coach announced "pads at 3%" right after exiting the pits on any EVO car
-- Fixed: incorrect damage percentages (24% instead of the real 2.4%)
-- Fixed: pit-speeding alert never triggered due to saturation of the sim's raw value
-- Fixed: lateral damage zones inverted (left/right)
-- Fixed: engine map alerts didn't recognize the most common naming conventions in EVO
+> **What safety rating is, for anyone new here.** It's your personal clean-driving score:
+> a number that follows you through your whole MMCM career, offline and online. Every
+> contact lowers it. Until this version it could **only** go down — there was no way to
+> earn it back by racing well, only to stop losing it. That's exactly what changes with
+> 1.9.9, explained below.
 
 ---
 
-## 🆕 v1.9 — Virtual Race Engineer
+### 🏆 MMCM Career — the offline championship
 
-Talk to your race engineer during the race. Ask for gaps, fuel, tyres, position and strategy using just your voice. Real-time responses from live telemetry — like a real team radio.
+One driver, one budget, one garage. You start with seed money and a car from the dealership,
+and go on from there on results alone.
 
-### How it works
+**Getting started** — On first activation a guided setup opens inside SimHub: how the economy
+works, which cars your starting budget affords, what's left in your pocket after the purchase.
+Three steps, no trip to the website.
+
+| What | How it works |
+|---|---|
+| 🏪 **Dealership** | Car catalogue with price, class and repair cost. You buy what your balance allows. |
+| 🔧 **Garage** | The cars you own, with accumulated damage. Repairs are paid for. |
+| 🏆 **Championships** | Available entries with requirements, entry fee and prize pool. You pick which car to race. |
+| 💰 **Sponsors** | The real economic engine: race prizes alone aren't enough. Offers arrive based on reputation and safety rating — small local ones first, bigger later. They expire, so check them. |
+| 🏦 **Bank** | Loans shown as side-by-side plans: instalment, total cost and APR for each. Early repayment and full history. No amount field and "request" button: compare first. |
+| 📈 **Progression** | Class and licence promotions on merit, with visible criteria. Every promotion comes with the numbers that decided it. |
+| 📊 **History** | Every session with contacts, track limits and how much safety rating it cost. The factual answer to "my rating never goes up and I never did anything". |
+
+**Now safety rating can go up too.** Before, the only way to "earn" it was a perfect race —
+which doesn't exist, because a single contact, even one that isn't your fault, still brings
+the number down. From this version the plugin measures **battle stints**: how long you raced
+side by side with a rival *without touching him*. A stint pays out only if it closes clean; a
+contact zeroes it, doesn't reduce it. Under 20 seconds it isn't a battle, it's an overtake,
+and it doesn't count.
+
+---
+
+### 🏁 MP Championship — the online championship
+
+The multiplayer season, run from the plugin from entry to the Race Direction verdict.
+
+**Three ways to enter**, chosen once for the whole season:
+
+- **Own car** — you race a car from your garage. The damage is yours.
+- **Rental** — the championship lends you a car. You pay the rental and damage up to the
+  excess; beyond that, the championship pays.
+- **Detached** — you just race: attendance, contacts and standings count, credits don't. It
+  stays open even to drivers in the red, because racing is the only way back.
+
+| What | How it works |
+|---|---|
+| ⏱️ **Live pre-qualifying** | Tracks in the cycle, done and remaining. With the distinction that matters: the **official time** (under the threshold, counts for the standings) and **your best**, with the delta from the threshold. |
+| 🚦 **Session traffic light** | Always-on-top overlay validating track, car, regulations and entry **while you set the session up in the menus**, not after. Switches to compact mode by itself once you're on track. |
+| ⚖️ **Race Direction** | Episodes come from the telemetry of both drivers involved, not from a report. Stewards see both sides, judge, publish the document. Complaints and reviews handled in the plugin. |
+| 📋 **Attendance queue** | One row per driver with the suggestion next to it and that driver's episodes inline. A round can't be closed with unreviewed contacts inside it. |
+| 🚗 **Entry list and eligibility** | Car catalogue with MMCM class and per-championship eligibility. |
+| 🏁 **Results and standings** | Round results, championship standings, history. Import of AC EVO result files and SimGrid data for admins. |
+
+**Contact detection rewritten.** The plugin now recognises the position of every car on
+track, not just your own: previously, without knowing where rivals were, every contact
+was classified as a wall hit. **Read-only: it doesn't modify or interfere with the game.**
+
+Contact recognition is more accurate too: it tells a real impact apart from hard braking
+or a corner taken at the limit, which used to trigger false positives.
+
+---
+
+### 🔒 Transparency and data
+
+- **Nothing leaves without consent.** Activating Career opens the full data notice with the
+  checkbox **not pre-ticked**. Decline and the toggle reverts itself; no data is sent.
+- **HMAC-SHA256 signed payloads** on every submission.
+- **Rival identity resolved server-side**: the plugin records positions and UTC timestamps,
+  not names. EVO car_ids change every session.
+- **No automatic penalties.** The plugin collects facts, Race Direction decides.
+- **No lost laps.** The lap queue is also journalled to disk: a crash or a power cut costs a
+  delay, not the race.
+
+---
+
+### 🐛 Fixes since 1.9.3
+
+| Area | Fixed |
+|---|---|
+| 🛞 **EVO tyres** | SimHub swapped front-right and rear-right: wheel values on EVO now come from raw paths. Reference pressures per compound. |
+| 🚧 **EVO damage** | Normalisation based on measured data. Lateral zones no longer inverted. |
+| 🏁 **EVO sessions** | EVO qualifying runs as `AC_TIME_ATTACK`: the plugin recognises it. "P2 out of 0/1" fixed. |
+| 🚦 **Pit speeding** | Real km/h delta over the limit, no longer saturated by the sim's raw value. |
+| 🛑 **Brake wear** | Skipped during the pit stop with a grace period on exit: no more "pads at 3%" right after coming out. |
+| 📍 **Gap and position** | Position context and closing-rate trend in the engineer's answers. |
+
+---
+
+## 🎙️ Virtual Race Engineer
+
+Talk to your engineer during the race. Ask for gaps, fuel, tyres, position and strategy with
+your voice. Real-time answers from live telemetry.
 
 ```
 You:       "Engineer"
@@ -294,89 +468,56 @@ Engineer:  "Smith ahead, 2 point 3. Gap to leader, 8 point 1.
             Good pace, keep it up, let's go"
 ```
 
-**Two activation modes:**
-- **Wake Word** — say "engineer" then your command
-- **Push-to-Talk** — press a button (mappable to steering wheel) then speak
-- **Both** — use whichever you prefer
+**Two activation modes:** wake word, Push-to-Talk on a wheel button, or both. Recognition runs
+in a separate high-priority process: no FPS drop, even in fullscreen.
 
 ### 🎤 General voice commands (ACC + EVO)
 
 | Category | What you say | Response |
-|----------|-------------|----------|
+|---|---|---|
 | **Gap** | `gap` | Full gap: ahead, behind, leader |
-| | `ahead` · `gap ahead` | Gap to car ahead |
-| | `behind` · `gap behind` | Gap to car behind |
-| | `gap to leader` · `leader` | Gap to race leader |
-| **Pace** | `pace` · `lap times` · `my pace` · `how am i doing` | Last lap, best lap, comparison |
-| **Fuel** | `fuel` · `fuel remaining` · `how much fuel` · `range` | Litres, consumption/lap, range |
-| | `strategy` · `pit stop` | + calculation if fuel is enough |
-| **Tyres** | `tyres` · `tires` · `pressures` | Pressures all 4 wheels |
+| | `ahead` · `gap ahead` | Gap to the car ahead |
+| | `behind` · `gap behind` | Gap to the car behind |
+| | `gap to leader` | Gap to the race leader |
+| **Pace** | `pace` · `lap times` · `how am i doing` | Last lap, best lap, comparison |
+| **Fuel** | `fuel` · `range` | Litres, consumption per lap, range |
+| | `strategy` · `pit stop` | + whether fuel is enough to finish |
+| **Tyres** | `tyres` · `pressures` | All four pressures |
 | | `tyre temps` | Pressures + temperatures |
-| **Position** | `position` · `where am i` · `standings` | Position, who's ahead/behind |
-| **Weather** | `weather` · `rain` · `track conditions` | Conditions and track grip |
-| **Report** | `situation` · `update` · `full report` | Everything combined |
+| **Position** | `position` · `where am i` | Position, who's ahead and behind |
+| **Weather** | `weather` · `rain` · `track conditions` | Conditions and grip |
+| **Report** | `situation` · `full report` | Everything at once |
 
-### 🧪 Extra voice commands AC EVO only
+> **In qualifying** gaps come from best lap times, not track position. In the pits or before
+> your first lap, the engineer says so instead of giving you junk.
 
-On Assetto Corsa EVO, additional commands are available for the car's specific systems:
+### 🧪 AC EVO only commands
 
 | Category | What you say | Response |
-|----------|-------------|----------|
-| **Track Limits** | `track limits` · `limits` · `cut` · `penalty` | Track limits status and active warnings |
-| **ERS / Hybrid** | `ers` · `deploy` · `hybrid` · `battery` · `overtake` | Battery state, deploy mode, overtake |
-| **Brakes** | `brakes` · `pads` · `discs` · `brake wear` | Pad and disc wear per wheel |
-| **Engine Map** | `map` · `engine map` · `mode` | Current map and mode name |
-| **Ideal Lap** | `ideal` · `ideal lap` · `predicted` · `how is my lap` | Predicted lap time vs best lap |
-| **Damage** | `damage` · `body damage` · `car damage` | Body + suspension damage per zone |
-| **Engine** | `engine` · `engine temps` · `water temp` · `oil temp` | Water/oil engine temperatures |
+|---|---|---|
+| **Track Limits** | `track limits` · `cut` · `penalty` | Track limit status and active warnings |
+| **ERS / Hybrid** | `ers` · `deploy` · `battery` · `overtake` | Battery, deploy mode, overtake |
+| **Brakes** | `brakes` · `pads` · `discs` | Pad and disc wear per wheel |
+| **Engine map** | `map` · `engine map` · `mode` | Current map and mode name |
+| **Ideal lap** | `ideal` · `predicted` | Predicted lap vs best lap |
+| **Damage** | `damage` · `body damage` | Body + suspension damage per zone |
+| **Engine** | `engine` · `water temp` · `oil temp` | Water and oil temperatures |
 
-> **In qualifying** the gap is calculated from best lap times, not track position.
-> If you're in the pits or haven't completed a lap, the engineer tells you.
+### 🤖 EVO Proactive Coach
 
-### 🤖 EVO Proactive Coach — spontaneous warnings
-
-Beyond responding to commands, on EVO the coach **speaks on its own** when it detects situations that require your attention, without you needing to ask:
-
-- 🛞 Pads or discs below wear threshold
-- 🚧 Body or suspension damage
-- 🔥 Water, oil, battery overheating
-- 🚦 Pit lane speed limit exceeded
-- ⚙️ Inadequate engine map (too aggressive with low fuel, forgotten in quali-mode at race start, to step down at end of stint)
-- ⚠️ Track limits invalidated
-- 🔄 Wrong way / reverse direction
-- ⏱️ Predicted lap better or worse than reference
-
-All alerts are configurable and individually disableable from the settings panel.
+On EVO the coach **speaks on its own**: pad or disc wear, body and suspension damage, water,
+oil and battery overheating, pit lane speeding, wrong engine map, invalidated track limits,
+wrong way, predicted lap better or worse. Every category can be switched off individually and
+every threshold is adjustable.
 
 ---
 
 ## 🏁 Compatibility
 
 | Game | Status | Notes |
-|------|--------|-------|
-| **Assetto Corsa Competizione** | ✅ Stable | All features fully operational |
-| **Assetto Corsa EVO** | 🧪 Experimental | Basic features working + dedicated voice commands and proactive coach |
-
----
-
-## ✅ All Features
-
-| Feature | Description |
-|---------|-------------|
-| 🎙️ **Voice engineer** | Voice commands for gap, pace, fuel, tyres, position, weather (ACC + EVO) |
-| 🧪 **Dedicated EVO commands** | Extra commands on AC EVO for ERS, brakes, engine map, damage, predicted lap, temperatures |
-| 🤖 **EVO proactive coach** | Spontaneous voice warnings on brake wear, damage, overheating, pit speeding, engine map |
-| 🎯 **Driver recognition** | Verifies MMCM event registration on session join |
-| 📡 **Telemetry** | Fuel, temperatures, damage, laps — every 60 seconds |
-| ⚖️ **Fair play** | Software and consumption verification |
-| 📻 **Race Director radio** | Voice messages with automatic volume ducking |
-| 🌡️ **Tyre pressures** | Adjustment suggestions after 2 qualifying laps |
-| ⛽ **Fuel calculation** | Required litres calculated before race start |
-| ⚠️ **Track limits** | Voice warning on invalidated laps (Pre-Qualifying) |
-| 🔊 **Multi-language** | Italian and English, auto-detected from Windows |
-| 🔄 **Auto-update** | Updates itself automatically |
-| 🎨 **Liveries** | Upload and download championship liveries |
-| 🔐 **Easy login** | Auto-login, Steam, or classic |
+|---|---|---|
+| **Assetto Corsa Competizione** | ✅ Stable | Engineer, telemetry, pre-qualifying, fair play, Race Direction |
+| **Assetto Corsa EVO** | 🧪 Experimental | All of the above + proactive coach, dedicated commands, career and MP championship |
 
 ---
 
@@ -384,69 +525,64 @@ All alerts are configurable and individually disableable from the settings panel
 
 ### Auto-Installer (recommended)
 
-1. Download `Installa_MMCM_SimConnect.bat` and `Install-MMCMSimConnect.ps1` from [releases](https://github.com/mdonadel83/AutoInstall_MMCMSIMCONNECT/releases)
-2. Place them in the **same folder**
+1. Download `Installa_MMCM_SimConnect.bat` and `Install-MMCMSimConnect.ps1` from
+   [releases](https://github.com/mdonadel83/AutoInstall_MMCMSIMCONNECT/releases)
+2. Put them in the **same folder**
 3. Close SimHub
 4. Double-click `Installa_MMCM_SimConnect.bat`
 5. Open SimHub → enable **MMCM SimConnect** in plugins
 
 ### Manual installation
 
-1. Download all files from [GitHub Releases](https://github.com/mdonadel83/MMCMSimConnect/releases) (`Release/net48` folder)
-2. Copy to SimHub installation folder
-3. Open SimHub → enable plugin → login
+1. Download everything from [Releases](https://github.com/mdonadel83/MMCMSimConnect/releases)
+   (`Release/net48` folder)
+2. Copy into your SimHub installation folder
+3. Open SimHub → enable the plugin → log in
 
-> **Requirements:** Windows 10/11, SimHub, Internet connection
+### Enabling Career
 
----
+1. Plugin settings → **🏆 Career** tab
+2. Tick **Enable MMCM Career mode** → read the notice → **Accept and enable**
+3. Driver creation opens: starting budget, car choice, confirmation
 
-## 🎬 Video tutorial
+> **Requirements:** Windows 10/11, SimHub 9.x, .NET Framework 4.8, Internet connection.
 
-[![Video tutorial](https://img.shields.io/badge/YouTube-Tutorial-red?style=for-the-badge&logo=youtube)](https://youtu.be/MqDn1ar2A54)
+> 💡 **A SimHub license is recommended.** Without one, SimHub updates game data 10 times a
+> second; with an active license, that goes up to 60. The plugin reads that data in real
+> time to work out lap times, contacts and session validity: more updates per second means
+> more precision, especially in the busy moments of a race. The license is a free-amount
+> donation (from a few euros), it's perpetual, and you can get it from the
+> [official SimHub website](https://www.simhubdash.com/). The plugin works without it too —
+> it's the difference between "almost always precise" and "always precise".
 
 ---
 
 ## ❓ FAQ
 
-<details>
-<summary><strong>Does it work with AC EVO?</strong></summary>
-AC EVO support is experimental. Basic features work, and from v1.9.2 dedicated voice commands and a specific proactive coach are available for EVO systems (ERS, engine map, predicted lap, temperatures, damage). We're continuing to develop full support.
-</details>
+**Do I need a career to race the online championship?**
+No. Without a career season you race just the same, only without the economy. And anyone who
+wants neither credits nor costs can enter as **detached**: attendance, contacts and standings
+still count.
 
-<details>
-<summary><strong>Does the voice engineer work in all sessions?</strong></summary>
-Yes — qualifying, practice, and race. In qualifying, gaps are based on best lap times. If you're in the pits or haven't completed a lap, the engineer tells you.
-</details>
+**What if I wreck a rental car?**
+You pay the damage up to the excess. Beyond that the championship pays. On return the admin
+sees the damage and the excess before confirming the charge.
 
-<details>
-<summary><strong>Do EVO commands work on ACC too?</strong></summary>
-No — the EVO-specific commands (ERS, engine map, predicted, detailed damage, engine temperatures) are only available when playing Assetto Corsa EVO. If you ask them on ACC, the engineer tells you the feature is not available on that game.
-</details>
+**I'm in the red — am I out?**
+No. Detached entry stays open to insolvent drivers, because racing is the only way back.
 
-<details>
-<summary><strong>Can I disable proactive alerts?</strong></summary>
-Yes, every alert category (brakes, damage, engine map, pit speeding, overheating, etc.) can be enabled/disabled individually in the plugin settings panel in SimHub.
-</details>
+**Does the plugin hand out penalties?**
+No. It collects the facts — damage, positions, timestamps — and takes them to the
+stewards. Decisions belong to Race Direction under the regulations.
 
-<details>
-<summary><strong>Does voice recognition affect FPS?</strong></summary>
-No. It runs on a separate high-priority process, completely independent from the game.
-</details>
+**Who sees my contacts in offline career?**
+Nobody. In single player contacts stay private between you and your safety rating.
 
-<details>
-<summary><strong>Can I use a steering wheel button as PTT?</strong></summary>
-Yes! Map a wheel button to an F-key, then assign that F-key as PTT in the plugin settings.
-</details>
+**Does voice recognition cost FPS?**
+No. Separate high-priority process, independent from the game.
 
-<details>
-<summary><strong>Is the plugin mandatory?</strong></summary>
-For MMCM Racing events, yes. The voice engineer and proactive coach are optional and can be disabled.
-</details>
-
-<details>
-<summary><strong>Do I need to update manually?</strong></summary>
-No, it updates itself automatically.
-</details>
+**Is the plugin mandatory?**
+For MMCM Racing events, yes. The voice engineer and proactive coach are optional.
 
 ---
 
@@ -455,14 +591,17 @@ No, it updates itself automatically.
 | | |
 |---|---|
 | 🌐 **Website** | [www.mmcmracing.it](https://www.mmcmracing.it) |
-| 💬 **Discord** | [discord.gg/jMa4GzGW](https://discord.gg/jMa4GzGW) |
+| 📖 **Plugin page** | [MMCM SimConnect](https://www.mmcmracing.it/simhub-mmcm-simconnect/) |
+| 💬 **Discord** | [discord.gg/ZrJg7KGnsd](https://discord.gg/ZrJg7KGnsd) |
+| ▶️ **YouTube** | [MMCM Racing](https://www.youtube.com/channel/UCnFQRv_ycZ8D8_hEivdR-ZA) |
 | 📧 **Email** | league@mmcmracing.it |
-| 🚀 **Auto-Installer** | [Download](https://github.com/mdonadel83/AutoInstall_MMCMSIMCONNECT/releases) |
 
 ---
 
 <p align="center">
-  <strong>🏎️ MMCM SimConnect v1.9.2</strong><br>
-  ACC: fully supported · AC EVO: experimental<br>
-  <sub>Made with ❤️ for the MMCM Racing community</sub>
+  <img src="docs/assets/icon-badge-128.png" alt="MMCM Racing" width="88"><br>
+  <b>🏎️ MMCM SimConnect v1.9.9</b><br>
+  ACC: pienamente supportato · AC EVO: sperimentale<br>
+  <i>Sviluppato con ❤️ per la community MMCM Racing</i><br>
+  <sub>GPL-3.0 · © 2026 MMCM Corse</sub>
 </p>
