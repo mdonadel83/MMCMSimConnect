@@ -2,7 +2,7 @@
   <img src="https://www.mmcmracing.it/img/MMCM_simconnect.jpg" alt="MMCM Racing — Online / Offline Championship" width="820">
 </p>
 
-<h1 align="center">MMCM SimConnect v1.9.9</h1>
+<h1 align="center">MMCM SimConnect v2.0</h1>
 
 <p align="center">
   <b>Plugin SimHub per Assetto Corsa Competizione e Assetto Corsa EVO</b><br>
