@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="docs/assets/readme-banner-1280x320.png" alt="MMCM Racing — Online / Offline Championship" width="820">
+  <img src="https://www.mmcmracing.it/img/MMCM_simconnect.jpg" alt="MMCM Racing — Online / Offline Championship" width="820">
 </p>
 
 <h1 align="center">MMCM SimConnect v1.9.9</h1>
